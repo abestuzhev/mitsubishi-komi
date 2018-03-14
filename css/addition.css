@@ -189,7 +189,7 @@
 
 /*карточка автомобиля*/
 .card-auto {
-
+    margin-bottom: 30px;
 }
 
 .card-auto::after {
@@ -234,10 +234,71 @@
     margin-bottom: 6px;
 }
 
+.card-auto .back {
+    /*font-size: 20px;*/
+    background: url(../img/form_back.png) 0 0 no-repeat;
+    display: block;
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    right: 0;
+    margin-right: 35px;
+}
+
+.card-auto + .form input[type="text"] {
+    width: 31.5%;
+}
+
+.table-responsive textarea {
+    width: 100%;
+}
+
+
+.card-auto-sale .card-auto__body {
+    padding: 0;
+}
+
+.card-auto-sale__block {
+    max-width: 100%;
+}
+
+
+.card-auto-sale__form {
+    text-align: center;
+}
+.card-auto-sale__form input[type="text"] {
+    width: 32.3%;
+}
+.card-auto-sale__form input[type="submit"] {
+    border: none;
+    outline: none;
+}
+
+
+.card-auto-sale__bonus {
+    text-align: left;
+}
+.block .right.new-image .card-auto-sale__bonus .presNo.new {
+    display: inline-block !important;
+    margin: 0 !important;
+}
+.card-auto-sale__bonus-benefit {
+    display: inline-block;
+    width: 162px !important;
+    height: 79px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
 
 @media screen and ( max-width:1300px ) {
     .page_single_info {
         padding: 20px 0 0 15px !important;
+    }
+
+    .card-auto-sale__form input[type="text"] {
+        width: 32.1%;
     }
 }
 
@@ -245,7 +306,62 @@
    .product-item {
        width: 33.33333%;
    }
+
+    .card-auto-sale__form input[type="text"] {
+        width: 100%;
+    }
+
+
+    .block .right.present .present_to_form {
+        margin-top: 0;
+    }
 }
+
+@media screen and ( max-width:980px ) {
+
+    .card-auto + .form input[type="text"] {
+        width: 100%;
+    }
+    .card-auto + .form input[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .block .left {
+        float: none;
+        width: 100%;
+    }
+    .block .left img {
+        text-align: center;
+        margin: 0 !important;
+    }
+
+    .block .right {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .block .present_to_form {
+        margin: 0 auto 20px !important;
+    }
+
+    .card-auto-sale__bonus {
+        text-align: center;
+    }
+
+    .form input[type="submit"] {
+        width: auto;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+    }
+}
+
 
 @media screen and ( max-width:768px ) {
    .product-item {
@@ -267,6 +383,32 @@
 
     .page-navi ul {
         margin-left: 0;
+    }
+
+    .card-auto__img {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-auto__img img {
+        width: auto;
+    }
+
+    .card-auto__body {
+        padding: 0 33px 0 0;
+    }
+
+    .card-auto .back {
+        margin-right: 47px;
+    }
+
+
+    .block .right .price_red {
+        font-size: 33px;
+    }
+
+    .form input[type="submit"] {
+        width: 100%;
     }
 }
 
@@ -335,6 +477,12 @@
 
     .show-filter + ul {
         display: block !important;
+    }
+
+    .form input[type="submit"] {
+        height: auto;
+        font-size: 16px;
+        padding: 10px 0;
     }
 }
 

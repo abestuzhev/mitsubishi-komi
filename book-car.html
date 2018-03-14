@@ -51,6 +51,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/addition.css">
@@ -564,6 +565,7 @@
 
                     <div class="table-responsive">
                         <div class="card-auto">
+                            <a href="index.php" class="back"></a>
                             <div class="card-auto__img"><img src="./img/OUTLANDER III_X38.jpg" alt=""></div>
                             <div class="card-auto__body">
                                 <div class="card-auto__title">OUTLANDER III</div>
@@ -581,6 +583,62 @@
                                     * Требуется дополнительная информация по данному предложению? Нажимайте кнопку "Забронировать", заполните форму и наш специалист отдела продаж свяжется с вами в самое кротчайшее время.
                                 </div>
                             </div>
+                        </div>
+    
+                        <div class="form" style="" id="form-send">
+                            <div class="title">Забронируй свой автомобиль сейчас!</div>
+                            <a id="form"></a>
+                            <form method="POST">
+                                <script>
+                                    $(document).ready(function() {
+                                        $('a.present_to_form').on('click', function(event) {
+
+                                            $('#form-send').show();
+                                            var target = $($(this).attr('href'));
+
+                                            if(target.length) {
+                                                //event.preventDefault();
+                                                $('html, body').animate({
+                                                    scrollTop: target.offset().top
+                                                }, 500);
+                                            }
+
+                                        });
+                                        //$('.phone-mask').mask('+7 (999)-999-99-99', {placeholder: "+7 (___)-___-__-__"});
+                                    })
+                                </script>
+                                <input type="text" name="AutoBronForm[name]" value="*Ваше имя" onfocus="if(this.value=='*Ваше имя'){this.value='';}" onblur="if(this.value==''){this.value='*Ваше имя';}">
+                                <input type="text" name="AutoBronForm[email]" value="Ваш e-mail" onfocus="if(this.value=='Ваш e-mail'){this.value='';}" onblur="if(this.value==''){this.value='Ваш e-mail';}">
+                                <input type="text" name="AutoBronForm[phone]" value="*Ваш телефон" onfocus="if(this.value=='*Ваш телефон'){this.value='';}" onblur="if(this.value==''){this.value='*Ваш телефон';}" class="nomrg phone-mask" data-mask="(000) 000-0000">
+            
+                                <textarea name="AutoBronForm[message]" onfocus="if(this.value=='Ваше сообщение'){this.value='';}" onblur="if(this.value==''){this.value='Ваше сообщение';}">Ваше сообщение</textarea>
+            
+                                <input type="hidden" name="ModelGroup" value="OUTLANDER III">
+                                <input type="hidden" name="Model" value="OUTLANDER III 2.0 Intense CVT 4 WD RUS">
+                                <input type="hidden" name="BodyColor" value="Черный">
+                                <input type="hidden" name="ProductionYear" value="2018-01-01">
+                                <input type="hidden" name="RetailPrice" value="1788990">
+                                <input type="hidden" name="BodyColorCode" value="X38">
+                                <input type="hidden" name="VIN" value="Z8TXTGF2WHM033735">
+                                <input type="hidden" name="PTS" value="2">
+                                <input type="hidden" name="model" value="all">
+                                <input type="hidden" name="color" value="all">
+                                <input type="hidden" name="page" value="0">
+                                <input type="hidden" name="gpts" value="all">
+            
+                                <fieldset class="captcha" style="display:none">
+                                    <label>*А не робот ли Вы? Введите в правое поле цифры, что видите слева</label>
+                                    <img src="captcha/5aa7da06c0f40.jpg" alt="">
+                                    <input type="text" name="katenok" value="*Введите сюда цифры" onfocus="if(this.value=='*Введите сюда цифры'){this.value='';}" onblur="if(this.value==''){this.value='*Введите сюда цифры';}" style="width: 219px;">
+            
+                                </fieldset>
+            
+                                <input type="submit" onclick="ga('send', 'event', 'forms', 'zakavto'); return true;" value="Отправить заявку" style="margin-top: 6px;">
+                                <input type="hidden" name="koten2" value="561871">
+        
+        
+                            </form>
+                            <div class="clear"></div>
                         </div>
                     </div>
                 </div>
