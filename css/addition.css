@@ -291,6 +291,10 @@
 }
 
 
+.table-responsive .block .right.present .price {
+  font-weight: 700;
+}
+
 
 @media screen and ( max-width:1300px ) {
     .page_single_info {
@@ -498,5 +502,8 @@
         position: static;
         margin: 0 0 10px;
     }
-}
 
+    .card-auto__title {
+      font-size: 30px;
+    }
+}
