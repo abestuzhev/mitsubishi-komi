@@ -1,3 +1,7 @@
+.iframe-body {
+    background-color: #fff;
+}
+
 #frame .container {
     margin: 0;
 }
